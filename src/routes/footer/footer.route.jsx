@@ -31,9 +31,9 @@ const Footer = () => {
           </div>
           <div className="social-links">
             {SOCIAL_LINKS.map((social, index) => {
-              const { name, link, svg: { width, height, viewBox, fill, d } } = social
+              const { name, link, label, svg: { width, height, viewBox, fill, d } } = social
               return (
-                <a target='_blank' name={name} href={link} rel="noreferrer"><SVG key={index} width={width} height={height} viewBox={viewBox} fill={fill} d={d} /></a>
+                <a target='_blank' aria-label={label} name={name} href={link} rel="noreferrer"><SVG key={index} width={width} height={height} viewBox={viewBox} fill={fill} d={d} /></a>
               )
             })}
           </div>

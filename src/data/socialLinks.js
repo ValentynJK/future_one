@@ -2,6 +2,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'facebook',
     link: 'https://www.facebook.com/',
+    label: "Read more on facebook",
     svg: {
       width: 22,
       height: 21,
@@ -14,6 +15,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'twitter',
     link: 'https://twitter.com/',
+    label: "Read more on twitter",
     svg: {
       width: 22,
       height: 21,
@@ -25,6 +27,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'instagram',
     link: 'https://www.instagram.com/',
+    label: "Read more on instagram",
     svg: {
       width: 22,
       height: 21,
@@ -36,6 +39,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'm',
     link: '',
+    label: "Read more on m",
     svg: {
       width: 22,
       height: 21,
@@ -47,6 +51,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'github',
     link: 'https://github.com/',
+    label: "Read more on github",
     svg: {
       width: 22,
       height: 21,
