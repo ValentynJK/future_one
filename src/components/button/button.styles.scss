@@ -1,0 +1,49 @@
+.button-container {
+  min-width: 183px;
+  width: 200px;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 1rem;
+  background-color: #02CC67;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.standard {
+
+    &:hover {
+      background-color: white;
+      color: #2B2D26;
+      border: 1px solid black;
+    }
+  }
+
+  &.navigation {
+    background-color: #29CC6A;
+    height: 34px;
+
+    &:hover {
+      background-color: white;
+      color: #2B2D26;
+      border: 1px solid black;
+    }
+  }
+
+  &.subscribe {
+    background-color: #29CC6A;
+    // color: black;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: #2B2D26;
+      color: white;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.drop-down-list-container {
+  height: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 270px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  .drop-down-content {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 25px 0 25px 20px;
+    gap: 10px;
+  }
+}
+
+.drop-down {
+  border: 1px solid black;
+  width: 200px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    background-color: #2B2D26;
+    color: white;
+  }
+}
+
+.close-open-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

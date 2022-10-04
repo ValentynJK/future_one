@@ -1,0 +1,8 @@
+.drop-down-icon {
+  font-size: 2.5em;
+  z-index: 12;
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+}

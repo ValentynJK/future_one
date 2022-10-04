@@ -1,0 +1,35 @@
+.popup-window-container {
+  position: fixed;
+  top: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  border: 2px solid #29CC6A;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+
+  @media screen and (max-width: 550px) {
+    width: 280px;
+    height: 200px;
+  }
+
+  .popup-window-content {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-window {
+    position: absolute;
+    font-size: 2.5em;
+    top: 5px;
+    right: 5px;
+  }
+}
