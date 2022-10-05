@@ -5,7 +5,7 @@ import Button from '../../components/button/button.component'
 import PopupWindow from '../../components/popup-window/popup-window.component';
 // styles
 import './banner.styles.scss';
-import bannerPhoto from '../../assets/pexels-andrea-piacquadio-3769021.png'
+import bannerPhoto from '../../assets/pexels-andrea-piacquadio-3769021.webp'
 
 const Banner = () => {
 
