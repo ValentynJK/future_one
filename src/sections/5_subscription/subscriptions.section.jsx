@@ -41,7 +41,7 @@ const Subscription = () => {
         <h3>Subscribe to our newsletter</h3>
       </header>
       <form className="subscribe-form" onSubmit={handleSubmit}>
-        <FormInput className='subscribe-input' label="Company email address" type="email" required onChange={handleChange} name="email" value={email} />
+        <FormInput className='subscribe-input' id="email" forLabel="email" label="Company email address" type="email" required onChange={handleChange} name="email" value={email} />
         <Button type='submit' children='Subscribe' buttonType='subscribe' />
       </form>
       <div className="subscribe-afterwords">
