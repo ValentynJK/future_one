@@ -1,7 +1,7 @@
 export const NAVIGATION = [
   {
     name: 'Overview',
-    path: './'
+    path: './overview'
   },
   {
     name: 'About',
