@@ -1,0 +1,118 @@
+.navigation-bar-container {
+  position: relative;
+  margin: 30px 120px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  grid-template-rows: 1fr 1fr;
+
+  @media (max-width: 1024px) {
+    margin: 30px 30px;
+  }
+
+  .navigation-bar-links-container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 1rem;
+    grid-column: 2;
+
+    @media (max-width: 1500px) {
+      display: flex;
+
+      &.none {
+        display: none;
+      }
+    }
+
+    & :first-child {
+      grid-column: 2/3;
+    }
+
+    .navigation-bar-button-container {
+      grid-column: 10/12;
+      justify-self: right;
+
+      @media (max-width: 1500px) {
+
+        .navigation {
+          // height: 50px;
+          height: 42px;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+
+    @media (max-width: 1500px) {
+      border: 1px solid black;
+      width: 200px;
+    }
+
+    &:hover {
+      background-color: #2B2D26;
+      text-decoration: underline;
+      color: white;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      transform: scale(1.2);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+      @media (max-width: 1500px) {
+        transform: unset;
+      }
+    }
+  }
+}
+
+.logo-container {
+  width: 172px;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  min-width: 173px;
+  grid-row: 2;
+
+  @media (max-width: 1500px) {
+    bottom: unset;
+    grid-row: 1;
+  }
+
+  span {
+    color: #2B2D26;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.close-open-button {
+  display: none;
+
+  @media screen and (max-width: 1500px) {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.mobile {
+  display: flex;
+
+  @media (max-width: 1500px) {
+    flex-flow: column nowrap;
+    align-items: start;
+    padding: 1rem 0 1rem 1rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+  }
+}

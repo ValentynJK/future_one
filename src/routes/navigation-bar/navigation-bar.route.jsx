@@ -1,16 +1,17 @@
 // react-router, react
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 // components
-import Button from '../../components/button/button.component'
-import DropDownNavigation from '../../components/drop-downNav/drop-down-nav.component'
+import Button from '../../components/button/button.component';
+import DropDownIcon from '../../components/drop-down-icon/drop-down-icon.component'
 import PopupWindow from '../../components/popup-window/popup-window.component'
-// data
-import { NAVIGATION } from '../../data/navigation'
+//data 
+import { NAVIGATION } from '../../data/navigation';
 // styles
-import './navigation.styling.scss'
+import './navigation-bar.styles.scss'
 
-const Navigation = () => {
+
+const NavigationBar = () => {
 
   const [popupTrigger, setPopupTrigger] = useState(false);
 
@@ -18,27 +19,33 @@ const Navigation = () => {
     setPopupTrigger(true)
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const onClickHandler = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
-      <div className="navigation-container">
-        <div className="logo">
+      <div className="navigation-bar-container">
+        <div className="logo-container">
           <Link to='/'>
-            <span>
-              Future one
-            </span>
+            <span>Future one</span>
           </Link>
         </div>
-        <nav className="nav-links-container">
+        <nav className={` ${isOpen ? 'mobile' : 'none'} navigation-bar-links-container`}>
           {NAVIGATION.map((el, index) => (
             <NavLink key={index} to={el.path} className="nav-link">
               {el.name}
             </NavLink>
           ))}
+          <div className="navigation-bar-button-container">
+            <Button onClick={togglePopup} children={'Contact Us'} buttonType={'navigation'} />
+          </div>
         </nav>
-        <div className="navigation-button-container">
-          <Button onClick={togglePopup} children={'Contact Us'} buttonType={'navigation'} />
+        <div onClick={onClickHandler} className='close-open-button'>
+          <DropDownIcon isOpen={isOpen} />
         </div>
-        <DropDownNavigation />
       </div>
       <PopupWindow trigger={popupTrigger} setPopupTrigger={setPopupTrigger}>
         <h2>
@@ -54,9 +61,8 @@ const Navigation = () => {
           <span>78 294 91 12</span>
         </address>
       </PopupWindow>
-      <Outlet />
     </>
   )
 }
 
-export default Navigation
+export default NavigationBar;
